@@ -28,6 +28,11 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/themify-icons.css",
+              "src/assets/css/elements.css",
+              "src/assets/style.css",
+              "src/assets/css/responsive.css",
               "src/styles.sass"
             ],
             "scripts": []

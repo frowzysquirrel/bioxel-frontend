@@ -1,0 +1,57 @@
+
+<ng-container *ngIf="!item">
+    <app-page-title title="Noticias"></app-page-title>
+    <div class="erika-standard-row white-bg">
+    <div class="container">
+        <div class="row">
+            <div class="blog-masonry">
+                <div class="col-md-4 col-sm-6 post-grid-item" *ngFor="let item of news">
+                                <article class="blog-post">
+                                    <div class="post-thumbnail">
+                                        <a routerLink="{{item.uid}}">
+                                            <div class="col-xs-12 cover-image" style="background-image: url('assets/{{item.cover}}')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-content-inner">
+                                            <h3><a routerLink="{{item.uid}}">{{item.title}}</a></h3>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="item">
+    <div class="slider-area slider-style-2" style="background-image: url(assets/{{item.cover}})">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <div class="banner-static-content">
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <app-page-title [title]="item.title"></app-page-title>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+        <br/><br/>
+        <p>
+            {{item.description}}
+        </p>
+        <p>
+            {{item.description2 ? item.description2 : ''}}
+        </p>
+            <br /><br /><br />
+        </div>
+    </div>
+    </div>
+
+</ng-container>
